@@ -19,7 +19,7 @@ services:
         ipv4_address: 10.1.250.11
 
   pae-apisix-dashboard:
-    image: apache/apisix-dashboard:3.0.0-alpine
+    image: apache/apisix-dashboard:3.0.1-alpine
     restart: always
     volumes:
     - /baaso/apisix-dashboard/conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml

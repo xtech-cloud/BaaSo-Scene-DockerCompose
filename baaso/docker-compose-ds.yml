@@ -4,7 +4,7 @@ version: "3"
 services:
 
   ds-mysql:
-    image: mysql:8.0.26
+    image: mysql:8.0.28
     restart: always
     ports:
       - "3306:3306"
@@ -17,7 +17,7 @@ services:
         ipv4_address: 10.1.2.11
 
   ds-mongo:
-    image: mongo:5.0.9
+    image: mongo:6.0.10
     restart: always
     ports:
       - "27017:27017"
@@ -31,7 +31,7 @@ services:
         ipv4_address: 10.1.2.21
 
   ds-redis:
-    image: redis:7.0.4
+    image: redis:7.2.1
     restart: always
     ports:
       - "6379:6379"
@@ -42,7 +42,7 @@ services:
         ipv4_address: 10.1.2.31
 
   ds-minio:
-    image: minio/minio:RELEASE.2022-07-30T05-21-40Z
+    image: minio/minio:RELEASE.2023-10-07T15-07-38Z
     restart: always
     ports:
       - "9000:9000"
