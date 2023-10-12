@@ -14,7 +14,7 @@ services:
   baaso-auth:
     image: baaso.platform/auth:1.1.0
     ports:
-      - "44300:5000"
+      - "44300:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
     networks:
@@ -24,7 +24,7 @@ services:
   baaso-administration:
     image: baaso.platform/administration:1.1.0
     ports:
-      - "44301:5000"
+      - "44301:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
     networks:
@@ -34,7 +34,7 @@ services:
   baaso-identity:
     image: baaso.platform/identity:1.1.0
     ports:
-      - "44302:5000"
+      - "44302:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
     networks:
@@ -44,7 +44,7 @@ services:
   baaso-saas:
     image: baaso.platform/saas:1.1.0
     ports:
-      - "44303:5000"
+      - "44303:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
     networks:
@@ -54,7 +54,7 @@ services:
   baaso-cms:
     image: baaso.platform/cms:1.1.0
     ports:
-      - "44304:5000"
+      - "44304:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
     networks:
@@ -64,7 +64,7 @@ services:
   baaso-webgateway:
     image: baaso.platform/webgateway:1.1.0
     ports:
-      - "44380:5000"
+      - "44380:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
     networks:
@@ -74,7 +74,7 @@ services:
   baaso-web:
     image: baaso.platform/web:1.1.0
     ports:
-      - "44381:5000"
+      - "44381:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
     networks:
@@ -84,7 +84,7 @@ services:
   baaso-publicwebgateway:
     image: baaso.platform/publicwebgateway:1.1.0
     ports:
-      - "44390:5000"
+      - "44390:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
     networks:
@@ -94,7 +94,7 @@ services:
   baaso-publicweb:
     image: baaso.platform/publicweb:1.1.0
     ports:
-      - "44391:5000"
+      - "44391:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
     networks:
