@@ -67,6 +67,7 @@ services:
       - "8080:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
+      - /baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
     networks:
       vpc:
         ipv4_address: 10.1.250.17
@@ -87,6 +88,7 @@ services:
       - "8090:80"
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
+      - /baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
     networks:
       vpc:
         ipv4_address: 10.1.250.19

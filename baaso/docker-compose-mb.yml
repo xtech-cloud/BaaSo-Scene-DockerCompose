@@ -10,7 +10,7 @@ services:
       - "5672:5672"
     networks:
       vpc:
-        ipv4_address: 10.1.3.11
+        ipv4_address: 10.1.1.11
 
   mb-elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.13
@@ -26,7 +26,7 @@ services:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
     networks:
       vpc:
-        ipv4_address: 10.1.3.21
+        ipv4_address: 10.1.1.21
 
   mb-kibana:
     image: docker.elastic.co/kibana/kibana:7.17.13
@@ -36,10 +36,10 @@ services:
     volumes:
       - /baaso/elasticsearch/data:/usr/share/elasticsearch/data
     environment:
-      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+      ELASTICSEARCH_HOSTS: '["http://mb-elasticsearch:9200"]'
     networks:
       vpc:
-        ipv4_address: 10.1.3.31
+        ipv4_address: 10.1.1.31
 
   mb-etcd:
     image: bitnami/etcd:3.5.9
@@ -55,7 +55,7 @@ services:
       - "2379:2379/tcp"
     networks:
       vpc:
-        ipv4_address: 10.1.3.41
+        ipv4_address: 10.1.1.41
 
 networks:
   vpc:
