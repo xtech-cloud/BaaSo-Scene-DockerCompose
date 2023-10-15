@@ -1,0 +1,121 @@
+
+version: "3"
+
+services:
+
+  baaso-dbmigrator:
+    image: baaso.platform/dbmigrator:1.1.1
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.DbMigrator/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.11
+
+  baaso-auth:
+    image: baaso.platform/auth:1.1.1
+    ports:
+      - "8000:80"
+      - "44300:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.100
+
+  baaso-identity:
+    image: baaso.platform/identity:1.1.1
+    ports:
+      - "8001:80"
+      - "44301:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.101
+
+  baaso-administration:
+    image: baaso.platform/administration:1.1.1
+    ports:
+      - "8002:80"
+      - "44302:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.102
+
+  baaso-saas:
+    image: baaso.platform/saas:1.1.1
+    ports:
+      - "8003:80"
+      - "44303:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.103
+
+  baaso-cms:
+    image: baaso.platform/cms:1.1.1
+    ports:
+      - "8004:80"
+      - "44304:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.104
+
+  baaso-webgateway:
+    image: baaso.platform/webgateway:1.1.1
+    ports:
+      - "8080:80"
+      - "44380:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
+      - /baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.180
+
+  baaso-web:
+    image: baaso.platform/web:1.1.1
+    ports:
+      - "8081:80"
+      - "44381:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.181
+
+  baaso-publicwebgateway:
+    image: baaso.platform/publicwebgateway:1.1.1
+    ports:
+      - "8090:80"
+      - "44390:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
+      - /baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.190
+
+  baaso-publicweb:
+    image: baaso.platform/publicweb:1.1.1
+    ports:
+      - "8091:80"
+      - "44391:443"
+    volumes:
+      - /baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
+    networks:
+      vpc:
+        ipv4_address: 10.1.100.191
+
+networks:
+  vpc:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.1.0.0/16
