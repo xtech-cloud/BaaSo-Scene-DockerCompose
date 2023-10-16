@@ -16,7 +16,7 @@ services:
       - "9092:9092/tcp"
     networks:
       vpc:
-        ipv4_address: 10.1.250.11
+        ipv4_address: 192.168.250.11
 
   pae-apisix-dashboard:
     image: apache/apisix-dashboard:3.0.1-alpine
@@ -27,7 +27,7 @@ services:
     - "9090:9000"
     networks:
       vpc:
-        ipv4_address: 10.1.250.21
+        ipv4_address: 192.168.250.21
 
 networks:
   vpc:
@@ -35,4 +35,4 @@ networks:
     ipam:
       driver: default
       config:
-      - subnet: 10.1.0.0/16
+      - subnet: 192.168.0.0/16
