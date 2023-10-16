@@ -1,0 +1,78 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://10.1.100.190:8090"
+  },
+  "Routes": [
+    {
+      "ServiceKey": "Account Service",
+      "ServiceDns": "http://10.1.100.100:8000",
+      "DownstreamPathTemplate": "/api/account/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.100",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Saas Service",
+      "ServiceDns": "http://10.1.100.103:8003",
+      "DownstreamPathTemplate": "/api/payment/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.103",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payment/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.102:8002",
+      "DownstreamPathTemplate": "/api/abp/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.102",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/abp/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Cms Service",
+      "ServiceDns": "http://10.1.100.104:8004",
+      "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.104",
+          "Port": 8004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cms-kit-public/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Cms Service",
+      "ServiceDns": "http://10.1.100.104:8004",
+      "DownstreamPathTemplate": "/api/cms-kit/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.104",
+          "Port": 8004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cms-kit/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    }
+
+  ]  
+}

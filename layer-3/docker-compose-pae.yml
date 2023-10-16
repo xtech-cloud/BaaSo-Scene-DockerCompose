@@ -1,0 +1,38 @@
+
+version: "3"
+
+services:
+
+  pae-apisix:
+    image: apache/apisix:3.2.2-debian
+    restart: always
+    volumes:
+      - /baaso/apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
+    ports:
+      - "9180:9180/tcp"
+      - "80:9080/tcp"
+      - "9091:9091/tcp"
+      - "443:9443/tcp"
+      - "9092:9092/tcp"
+    networks:
+      vpc:
+        ipv4_address: 10.1.250.11
+
+  pae-apisix-dashboard:
+    image: apache/apisix-dashboard:3.0.1-alpine
+    restart: always
+    volumes:
+    - /baaso/apisix-dashboard/conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
+    ports:
+    - "9090:9000"
+    networks:
+      vpc:
+        ipv4_address: 10.1.250.21
+
+networks:
+  vpc:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.1.0.0/16
