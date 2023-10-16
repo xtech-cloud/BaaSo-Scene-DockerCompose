@@ -1,16 +1,16 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://10.1.100.180:8080"
+    "BaseUrl": "http://192.168.100.180:8080"
   },
   "Routes": [
     {
       "ServiceKey": "Account Service",
-      "ServiceDns": "http://10.1.100.100:8000",
+      "ServiceDns": "http://192.168.100.100:8000",
       "DownstreamPathTemplate": "/api/account/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.100",
+          "Host": "192.168.100.100",
           "Port": 8000
         }
       ],
@@ -19,12 +19,12 @@
     },
     {
       "ServiceKey": "Identity Service",
-      "ServiceDns": "http://10.1.100.101:8001",
+      "ServiceDns": "http://192.168.100.101:8001",
       "DownstreamPathTemplate": "/api/identity/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.101",
+          "Host": "192.168.100.101",
           "Port": 8001
         }
       ],
@@ -33,12 +33,12 @@
     },
     {
       "ServiceKey": "Identity Service",
-      "ServiceDns": "http://10.1.100.101:8001",
+      "ServiceDns": "http://192.168.100.101:8001",
       "DownstreamPathTemplate": "/api/openiddict/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.101",
+          "Host": "192.168.100.101",
           "Port": 8001
         }
       ],
@@ -47,12 +47,12 @@
     },
     {
       "ServiceKey": "Identity Service",
-      "ServiceDns": "http://10.1.100.101:8001",
+      "ServiceDns": "http://192.168.100.101:8001",
       "DownstreamPathTemplate": "/api/account-admin/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.101",
+          "Host": "192.168.100.101",
           "Port": 8001
         }
       ],
@@ -61,12 +61,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/abp/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -75,12 +75,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/audit-logging/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -89,12 +89,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/language-management/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -103,12 +103,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/text-template-management/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -117,12 +117,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/feature-management/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -131,12 +131,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/permission-management/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -145,12 +145,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/setting-management/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -159,12 +159,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/lepton-theme-management/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -173,12 +173,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/gdpr/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -187,12 +187,12 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.103:8003",
+      "ServiceDns": "http://192.168.100.103:8003",
       "DownstreamPathTemplate": "/api/saas/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.103",
+          "Host": "192.168.100.103",
           "Port": 8003
         }
       ],
@@ -201,12 +201,12 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.103:8003",
+      "ServiceDns": "http://192.168.100.103:8003",
       "DownstreamPathTemplate": "/api/payment-admin/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.103",
+          "Host": "192.168.100.103",
           "Port": 8003
         }
       ],
@@ -216,12 +216,12 @@
 
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104:8004",
+      "ServiceDns": "http://192.168.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit-admin/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "192.168.100.104",
           "Port": 8004
         }
       ],
@@ -230,12 +230,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104:8004",
+      "ServiceDns": "http://192.168.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "192.168.100.104",
           "Port": 8004
         }
       ],
@@ -244,12 +244,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104:8004",
+      "ServiceDns": "http://192.168.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "192.168.100.104",
           "Port": 8004
         }
       ],

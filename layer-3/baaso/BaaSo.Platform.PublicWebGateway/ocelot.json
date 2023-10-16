@@ -1,16 +1,16 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://10.1.100.190:8090"
+    "BaseUrl": "http://192.168.100.190:8090"
   },
   "Routes": [
     {
       "ServiceKey": "Account Service",
-      "ServiceDns": "http://10.1.100.100:8000",
+      "ServiceDns": "http://192.168.100.100:8000",
       "DownstreamPathTemplate": "/api/account/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.100",
+          "Host": "192.168.100.100",
           "Port": 8000
         }
       ],
@@ -19,12 +19,12 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.103:8003",
+      "ServiceDns": "http://192.168.100.103:8003",
       "DownstreamPathTemplate": "/api/payment/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.103",
+          "Host": "192.168.100.103",
           "Port": 8003
         }
       ],
@@ -33,12 +33,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102:8002",
+      "ServiceDns": "http://192.168.100.102:8002",
       "DownstreamPathTemplate": "/api/abp/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "192.168.100.102",
           "Port": 8002
         }
       ],
@@ -47,12 +47,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104:8004",
+      "ServiceDns": "http://192.168.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "192.168.100.104",
           "Port": 8004
         }
       ],
@@ -61,12 +61,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104:8004",
+      "ServiceDns": "http://192.168.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "192.168.100.104",
           "Port": 8004
         }
       ],
