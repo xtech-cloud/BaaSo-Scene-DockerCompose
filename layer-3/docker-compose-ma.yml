@@ -4,7 +4,7 @@ version: "3"
 services:
 
   baaso-dbmigrator:
-    image: baaso.platform/dbmigrator:1.1.5
+    image: baaso.platform/dbmigrator:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.DbMigrator/appsettings.json:/app/appsettings.json
     networks:
@@ -12,7 +12,7 @@ services:
         ipv4_address: 192.168.100.11
 
   baaso-auth:
-    image: baaso.platform/auth:1.1.5
+    image: baaso.platform/auth:1.1.6
     ports:
       - "8000:80"
     volumes:
@@ -24,7 +24,7 @@ services:
         ipv4_address: 192.168.100.100
 
   baaso-identity:
-    image: baaso.platform/identity:1.1.5
+    image: baaso.platform/identity:1.1.6
     ports:
       - "8001:80"
     volumes:
@@ -36,7 +36,7 @@ services:
         ipv4_address: 192.168.100.101
 
   baaso-administration:
-    image: baaso.platform/administration:1.1.5
+    image: baaso.platform/administration:1.1.6
     ports:
       - "8002:80"
     volumes:
@@ -48,7 +48,7 @@ services:
         ipv4_address: 192.168.100.102
 
   baaso-saas:
-    image: baaso.platform/saas:1.1.5
+    image: baaso.platform/saas:1.1.6
     ports:
       - "8003:80"
     volumes:
@@ -60,7 +60,7 @@ services:
         ipv4_address: 192.168.100.103
 
   baaso-cms:
-    image: baaso.platform/cms:1.1.5
+    image: baaso.platform/cms:1.1.6
     ports:
       - "8004:80"
     volumes:
@@ -72,7 +72,7 @@ services:
         ipv4_address: 192.168.100.104
 
   baaso-webgateway:
-    image: baaso.platform/webgateway:1.1.5
+    image: baaso.platform/webgateway:1.1.6
     ports:
       - "8080:80"
     volumes:
@@ -85,7 +85,7 @@ services:
         ipv4_address: 192.168.100.180
 
   baaso-web:
-    image: baaso.platform/web:1.1.5
+    image: baaso.platform/web:1.1.6
     ports:
       - "8081:80"
     volumes:
@@ -97,7 +97,7 @@ services:
         ipv4_address: 192.168.100.181
 
   baaso-publicwebgateway:
-    image: baaso.platform/publicwebgateway:1.1.5
+    image: baaso.platform/publicwebgateway:1.1.6
     ports:
       - "8090:80"
     volumes:
@@ -110,7 +110,7 @@ services:
         ipv4_address: 192.168.100.190
 
   baaso-publicweb:
-    image: baaso.platform/publicweb:1.1.5
+    image: baaso.platform/publicweb:1.1.6
     ports:
       - "8091:80"
     volumes:
