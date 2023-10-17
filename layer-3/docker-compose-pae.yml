@@ -3,14 +3,15 @@ version: "3"
 
 services:
 
+
   pae-apisix:
     image: apache/apisix:3.2.2-debian
     restart: always
     volumes:
       - /baaso/apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
     ports:
-      - "80:80/tcp"
       - "443:443/tcp"
+      - "80:80/tcp"
       - "9180:9180/tcp"
       - "9091:9091/tcp"
       - "9092:9092/tcp"
@@ -28,6 +29,18 @@ services:
     networks:
       vpc:
         ipv4_address: 192.168.250.21
+
+  pae-nginx:
+          image: nginx:1.25.2
+    restart: always
+    volumes:
+      - /baaso/nginx/conf.d:/etc/nginx/conf.d
+      - /baaso/nginx/www:/root/www
+    ports:
+      - "8080:80/tcp"
+    networks:
+      vpc:
+        ipv4_address: 192.168.250.31
 
 networks:
   vpc:
