@@ -16,7 +16,9 @@
 #
 
 apisix:
-  node_listen: 9080              # APISIX listening port
+  node_listen: 
+    - 80
+    - 443
   enable_ipv6: false
 
   enable_control: true

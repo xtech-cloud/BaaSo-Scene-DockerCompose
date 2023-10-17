@@ -9,10 +9,10 @@ services:
     volumes:
       - /baaso/apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
     ports:
+      - "80:80/tcp"
+      - "443:443/tcp"
       - "9180:9180/tcp"
-      - "80:9080/tcp"
       - "9091:9091/tcp"
-      - "443:9443/tcp"
       - "9092:9092/tcp"
     networks:
       vpc:

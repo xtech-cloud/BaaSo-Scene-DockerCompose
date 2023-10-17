@@ -79,7 +79,7 @@ services:
         ipv4_address: 192.168.100.180
 
   baaso-web:
-    image: baaso.platform/web:1.1.1
+    image: baaso.platform/web:1.1.2
     ports:
       - "8081:80"
       - "44381:443"
