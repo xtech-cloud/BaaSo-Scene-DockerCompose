@@ -3,7 +3,6 @@ version: "3"
 
 services:
 
-
   pae-apisix:
     image: apache/apisix:3.2.2-debian
     restart: always
@@ -31,7 +30,7 @@ services:
         ipv4_address: 192.168.250.21
 
   pae-nginx:
-          image: nginx:1.25.2
+    image: nginx:1.25.2
     restart: always
     volumes:
       - /baaso/nginx/conf.d:/etc/nginx/conf.d
