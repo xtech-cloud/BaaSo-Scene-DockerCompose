@@ -18,6 +18,8 @@ services:
       - "44300:443"
     volumes:
       - /baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     networks:
       vpc:
         ipv4_address: 192.168.100.100
@@ -29,6 +31,8 @@ services:
       - "44301:443"
     volumes:
       - /baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     networks:
       vpc:
         ipv4_address: 192.168.100.101
@@ -40,6 +44,8 @@ services:
       - "44302:443"
     volumes:
       - /baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     networks:
       vpc:
         ipv4_address: 192.168.100.102
@@ -49,6 +55,8 @@ services:
     ports:
       - "8003:80"
       - "44303:443"
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     volumes:
       - /baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
     networks:
@@ -60,6 +68,8 @@ services:
     ports:
       - "8004:80"
       - "44304:443"
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     volumes:
       - /baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
     networks:
@@ -71,6 +81,8 @@ services:
     ports:
       - "8080:80"
       - "44380:443"
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     volumes:
       - /baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
       - /baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
@@ -83,6 +95,8 @@ services:
     ports:
       - "8081:80"
       - "44381:443"
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     volumes:
       - /baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
     networks:
@@ -94,6 +108,8 @@ services:
     ports:
       - "8090:80"
       - "44390:443"
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
       - /baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
@@ -106,6 +122,8 @@ services:
     ports:
       - "8091:80"
       - "44391:443"
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0"
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
     networks:
