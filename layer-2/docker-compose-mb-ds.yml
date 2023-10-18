@@ -54,9 +54,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /nas/file/basso/mysql/data:/var/lib/mysql
-      - /nas/file/basso/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
-      - /nas/file/basso/mysql/mem.sh:/root/mem.sh:ro
+      - /nas/data/basso/mysql/data:/var/lib/mysql
+      - /nas/data/basso/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
+      - /nas/data/basso/mysql/mem.sh:/root/mem.sh:ro
     environment:
       MYSQL_ROOT_PASSWORD: "mysql@XTC"
     networks:
@@ -70,7 +70,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /nas/file/basso/redis/data:/data
+      - /nas/data/basso/redis/data:/data
     networks:
       - vpc
 
