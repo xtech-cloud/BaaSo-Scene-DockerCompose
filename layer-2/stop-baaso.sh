@@ -1,0 +1,9 @@
+docker stop baaso-baaso-web-1
+docker stop baaso-baaso-publicweb-1
+docker stop baaso-baaso-publicwebgateway-1
+docker stop baaso-baaso-webgateway-1
+docker stop baaso-baaso-cms-1
+docker stop baaso-baaso-saas-1
+docker stop baaso-baaso-administration-1
+docker stop baaso-baaso-identity-1
+docker stop baaso-baaso-auth-1
