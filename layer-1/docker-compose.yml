@@ -1,11 +1,15 @@
-
 version: "3"
 
 services:
 
-    mb-rabbitmq:
+  mb-rabbitmq:
     image: rabbitmq:3.12.6
     restart: always
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
     ports:
       - "5672:5672"
     networks:
@@ -41,6 +45,12 @@ services:
   ds-mysql:
     image: mysql:8.0.28
     restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-uroot", "-p$MYSQL_ROOT_PASSWORD"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command: --default_authentication_plugin=mysql_native_password
     ports:
       - "3306:3306"
     volumes:
@@ -55,6 +65,8 @@ services:
   ds-redis:
     image: redis:7.2.1
     restart: always
+    healthcheck:
+      test: ["CMD", "redis-cli","ping"]
     ports:
       - "6379:6379"
     volumes:
@@ -65,6 +77,11 @@ services:
   ds-minio:
     image: minio/minio:RELEASE.2023-10-07T15-07-38Z
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
     ports:
       - "9000:9000"
       - "9001:9001"
@@ -81,6 +98,15 @@ services:
     image: baaso.platform/dbmigrator:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.DbMigrator/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -88,6 +114,15 @@ services:
     image: baaso.platform/auth:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -95,6 +130,15 @@ services:
     image: baaso.platform/identity:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -102,6 +146,15 @@ services:
     image: baaso.platform/administration:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -109,6 +162,15 @@ services:
     image: baaso.platform/saas:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -116,6 +178,15 @@ services:
     image: baaso.platform/cms:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -124,6 +195,15 @@ services:
     volumes:
       - /baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
       - /baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -131,6 +211,15 @@ services:
     image: baaso.platform/web:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -139,6 +228,15 @@ services:
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
       - /baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 
@@ -146,6 +244,15 @@ services:
     image: baaso.platform/publicweb:1.1.6
     volumes:
       - /baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      ds-redis:
+        condition: service_healthy
+      ds-mysql:
+        condition: service_healthy
+      mb-rabbitmq:
+        condition: service_healthy
     networks:
       - vpc
 

@@ -1,4 +1,3 @@
-#!/bash
 mkdir -p /baaso
 
 mkdir -p /baaso/elasticsearch/data
@@ -17,7 +16,7 @@ cp -rf ./baaso/BaaSo.Platform.SaasService /baaso/baaso/
 cp -rf ./baaso/BaaSo.Platform.CmsService /baaso/baaso/
 cp -rf ./baaso/BaaSo.Platform.WebGateway /baaso/baaso/
 cp -rf ./baaso/BaaSo.Platform.PublicWebGateway /baaso/baaso/
-cp -rf ./baaso/BaaSo.Platform.Web baaso /baaso/baaso/
+cp -rf ./baaso/BaaSo.Platform.Web /baaso/baaso/
 cp -rf ./baaso/BaaSo.Platform.PublicWeb /baaso/baaso/
 
 cp -rf ./nginx /baaso/
