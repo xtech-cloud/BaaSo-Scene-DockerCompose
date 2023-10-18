@@ -22,7 +22,7 @@ services:
     ports:
       - "9200:9200"
     volumes:
-      - /nas/file/elasticsearch/data:/usr/share/elasticsearch/data
+      - /nas/file/basso/elasticsearch/data:/usr/share/elasticsearch/data
     environment:
       discovery.type: single-node
       xpack.security.enabled: "false"
@@ -36,7 +36,7 @@ services:
     ports:
       - "5601:5601"
     volumes:
-      - /nas/file/elasticsearch/data:/usr/share/elasticsearch/data
+      - /nas/file/basso/elasticsearch/data:/usr/share/elasticsearch/data
     environment:
       ELASTICSEARCH_HOSTS: '["http://mb-elasticsearch:9200"]'
     networks:
@@ -54,9 +54,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /nas/data/mysql/data:/var/lib/mysql
-      - /nas/data/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
-      - /nas/data/mysql/mem.sh:/root/mem.sh:ro
+      - /nas/file/basso/mysql/data:/var/lib/mysql
+      - /nas/file/basso/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
+      - /nas/file/basso/mysql/mem.sh:/root/mem.sh:ro
     environment:
       MYSQL_ROOT_PASSWORD: "mysql@XTC"
     networks:
@@ -70,7 +70,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /nas/data/redis/data:/data
+      - /nas/file/basso/redis/data:/data
     networks:
       - vpc
 
@@ -86,7 +86,7 @@ services:
       - "9000:9000"
       - "9001:9001"
     volumes:
-      - /nas/file/minio/data:/data
+      - /nas/file/basso/minio/data:/data
     environment:
       MINIO_ROOT_USER: "3KJLIOSFODNN0EXAMPO0"
       MINIO_ROOT_PASSWORD: "vJalrXUtnFEMI/I5MDENG/bPxRfmCYEXAMPLEHEY"
