@@ -10,9 +10,9 @@ services:
       - /baaso/apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
     ports:
       - "9180:9180/tcp"
-      - "80:9080/tcp"
+      - "9080:9080/tcp"
       - "9091:9091/tcp"
-      - "443:9443/tcp"
+      - "9443:9443/tcp"
       - "9092:9092/tcp"
     networks:
       vpc:
@@ -28,6 +28,20 @@ services:
     networks:
       vpc:
         ipv4_address: 10.1.250.21
+
+  pae-nginx:
+    image: nginx:1.25.2
+    restart: always
+    volumes:
+      - /baaso/nginx/conf.d:/etc/nginx/conf.d
+      - /baaso/nginx/www:/etc/nginx/www
+      - /baaso/nginx/cers:/etc/nginx/cers
+    ports:
+      - "80:80/tcp"
+      - "443:443/tcp"
+    networks:
+      vpc:
+        ipv4_address: 10.1.250.31
 
 networks:
   vpc:
