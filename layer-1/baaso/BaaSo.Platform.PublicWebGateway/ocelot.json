@@ -7,7 +7,7 @@
       "ServiceKey": "Account Service",
       "ServiceDns": "http://10.1.100.100:8000",
       "DownstreamPathTemplate": "/api/account/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "10.1.100.100",
@@ -21,7 +21,7 @@
       "ServiceKey": "Saas Service",
       "ServiceDns": "http://10.1.100.103:8003",
       "DownstreamPathTemplate": "/api/payment/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "10.1.100.103",
@@ -35,7 +35,7 @@
       "ServiceKey": "Administration Service",
       "ServiceDns": "http://10.1.100.102:8002",
       "DownstreamPathTemplate": "/api/abp/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "10.1.100.102",
@@ -49,7 +49,7 @@
       "ServiceKey": "Cms Service",
       "ServiceDns": "http://10.1.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "10.1.100.104",
@@ -63,7 +63,7 @@
       "ServiceKey": "Cms Service",
       "ServiceDns": "http://10.1.100.104:8004",
       "DownstreamPathTemplate": "/api/cms-kit/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "10.1.100.104",
