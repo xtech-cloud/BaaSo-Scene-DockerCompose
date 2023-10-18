@@ -1,0 +1,260 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://10.1.100.11:8080"
+  },
+  "Routes": [
+    {
+      "ServiceKey": "Account Service",
+      "ServiceDns": "http://10.1.100.11:8000",
+      "DownstreamPathTemplate": "/api/account/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Identity Service",
+      "ServiceDns": "http://10.1.100.11:8001",
+      "DownstreamPathTemplate": "/api/identity/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Identity Service",
+      "ServiceDns": "http://10.1.100.11:8001",
+      "DownstreamPathTemplate": "/api/openiddict/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/openiddict/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Identity Service",
+      "ServiceDns": "http://10.1.100.11:8001",
+      "DownstreamPathTemplate": "/api/account-admin/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account-admin/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/abp/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/abp/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/audit-logging/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/audit-logging/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/language-management/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/language-management/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/text-template-management/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/text-template-management/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/feature-management/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/feature-management/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/permission-management/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/permission-management/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/setting-management/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/setting-management/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/lepton-theme-management/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/lepton-theme-management/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Administration Service",
+      "ServiceDns": "http://10.1.100.11:8002",
+      "DownstreamPathTemplate": "/api/gdpr/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gdpr/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Saas Service",
+      "ServiceDns": "http://10.1.100.11:8003",
+      "DownstreamPathTemplate": "/api/saas/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/saas/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Saas Service",
+      "ServiceDns": "http://10.1.100.11:8003",
+      "DownstreamPathTemplate": "/api/payment-admin/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payment-admin/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+
+    {
+      "ServiceKey": "Cms Service",
+      "ServiceDns": "http://10.1.100.11:8004",
+      "DownstreamPathTemplate": "/api/cms-kit-admin/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cms-kit-admin/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Cms Service",
+      "ServiceDns": "http://10.1.100.11:8004",
+      "DownstreamPathTemplate": "/api/cms-kit/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cms-kit/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "ServiceKey": "Cms Service",
+      "ServiceDns": "http://10.1.100.11:8004",
+      "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.1.100.11",
+          "Port": 8004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cms-kit-public/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    }
+  ]  
+}

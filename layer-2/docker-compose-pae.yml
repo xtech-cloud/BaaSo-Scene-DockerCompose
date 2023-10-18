@@ -1,0 +1,24 @@
+
+version: "3"
+
+services:
+
+  pae-nginx:
+    image: nginx:1.25.2
+    restart: always
+    volumes:
+      - /baaso/nginx/conf.d:/etc/nginx/conf.d
+      - /baaso/nginx/www:/root/www
+    ports:
+      - "8080:80/tcp"
+    networks:
+      vpc:
+        ipv4_address: 192.168.250.31
+
+networks:
+  vpc:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 192.168.0.0/16
