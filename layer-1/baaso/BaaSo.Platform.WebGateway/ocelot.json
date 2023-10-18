@@ -1,16 +1,16 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://10.1.100.180"
+    "BaseUrl": "http://baaso-webgateway"
   },
   "Routes": [
     {
       "ServiceKey": "Account Service",
-      "ServiceDns": "http://10.1.100.100",
+      "ServiceDns": "http://baaso-auth",
       "DownstreamPathTemplate": "/api/account/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.100",
+          "Host": "baaso-auth",
           "Port": 80
         }
       ],
@@ -19,12 +19,12 @@
     },
     {
       "ServiceKey": "Identity Service",
-      "ServiceDns": "http://10.1.100.101",
+      "ServiceDns": "http://baaso-identity",
       "DownstreamPathTemplate": "/api/identity/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.101",
+          "Host": "baaso-identity",
           "Port": 80
         }
       ],
@@ -33,12 +33,12 @@
     },
     {
       "ServiceKey": "Identity Service",
-      "ServiceDns": "http://10.1.100.101",
+      "ServiceDns": "http://baaso-identity",
       "DownstreamPathTemplate": "/api/openiddict/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.101",
+          "Host": "baaso-identity",
           "Port": 80
         }
       ],
@@ -47,12 +47,12 @@
     },
     {
       "ServiceKey": "Identity Service",
-      "ServiceDns": "http://10.1.100.101",
+      "ServiceDns": "http://baaso-identity",
       "DownstreamPathTemplate": "/api/account-admin/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.101",
+          "Host": "baaso-identity",
           "Port": 80
         }
       ],
@@ -61,12 +61,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/abp/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -75,12 +75,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/audit-logging/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -89,12 +89,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/language-management/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -103,12 +103,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/text-template-management/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -117,7 +117,7 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/feature-management/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -131,12 +131,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/permission-management/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -145,12 +145,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/setting-management/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -159,12 +159,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/lepton-theme-management/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -173,12 +173,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/gdpr/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -187,12 +187,12 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.103",
+      "ServiceDns": "http://baaso-saas",
       "DownstreamPathTemplate": "/api/saas/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.103",
+          "Host": "baaso-saas",
           "Port": 80
         }
       ],
@@ -201,12 +201,12 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.103",
+      "ServiceDns": "http://baaso-saas",
       "DownstreamPathTemplate": "/api/payment-admin/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.103",
+          "Host": "baaso-saas",
           "Port": 80
         }
       ],
@@ -216,12 +216,12 @@
 
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit-admin/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "baaso-cms",
           "Port": 80
         }
       ],
@@ -230,12 +230,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "baaso-cms",
           "Port": 80
         }
       ],
@@ -244,12 +244,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "baaso-cms",
           "Port": 80
         }
       ],

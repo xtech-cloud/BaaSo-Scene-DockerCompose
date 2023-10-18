@@ -1,16 +1,16 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://10.1.100.190"
+    "BaseUrl": "http://baaso-publicwebgateway"
   },
   "Routes": [
     {
       "ServiceKey": "Account Service",
-      "ServiceDns": "http://10.1.100.100",
+      "ServiceDns": "http://baaso-auth",
       "DownstreamPathTemplate": "/api/account/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.100",
+          "Host": "baaso-auth",
           "Port": 80
         }
       ],
@@ -19,12 +19,12 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.103",
+      "ServiceDns": "http://baaso-saas",
       "DownstreamPathTemplate": "/api/payment/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.103",
+          "Host": "baaso-saas",
           "Port": 80
         }
       ],
@@ -33,12 +33,12 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.102",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/abp/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.102",
+          "Host": "baaso-administration",
           "Port": 80
         }
       ],
@@ -47,12 +47,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "baaso-cms",
           "Port": 80
         }
       ],
@@ -61,12 +61,12 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.104",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.104",
+          "Host": "baaso-cms",
           "Port": 80
         }
       ],
