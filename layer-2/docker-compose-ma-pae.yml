@@ -5,7 +5,7 @@ services:
   baaso-dbmigrator:
     image: baaso.platform/dbmigrator:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.DbMigrator/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.DbMigrator/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -14,7 +14,7 @@ services:
   baaso-auth:
     image: baaso.platform/auth:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -23,7 +23,7 @@ services:
   baaso-identity:
     image: baaso.platform/identity:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -32,7 +32,7 @@ services:
   baaso-administration:
     image: baaso.platform/administration:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -41,7 +41,7 @@ services:
   baaso-saas:
     image: baaso.platform/saas:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -50,7 +50,7 @@ services:
   baaso-cms:
     image: baaso.platform/cms:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -59,8 +59,8 @@ services:
   baaso-webgateway:
     image: baaso.platform/webgateway:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
-      - /data/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
+      - /data/baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -69,7 +69,7 @@ services:
   baaso-web:
     image: baaso.platform/web:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -78,8 +78,8 @@ services:
   baaso-publicwebgateway:
     image: baaso.platform/publicwebgateway:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
-      - /data/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
+      - /data/baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -88,7 +88,7 @@ services:
   baaso-publicweb:
     image: baaso.platform/publicweb:1.1.6
     volumes:
-      - /data/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
+      - /data/baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -98,9 +98,9 @@ services:
     image: nginx:1.25.2
     restart: always
     volumes:
-      - /data/nginx/conf.d:/etc/nginx/conf.d
-      - /data/nginx/www:/etc/nginx/www
-      - /data/nginx/cers:/etc/nginx/cers
+      - /data/baaso/nginx/conf.d:/etc/nginx/conf.d
+      - /data/baaso/nginx/www:/etc/nginx/www
+      - /data/baaso/nginx/cers:/etc/nginx/cers
     ports:
       - "80:80/tcp"
       - "443:443/tcp"
