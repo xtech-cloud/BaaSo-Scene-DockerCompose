@@ -15,6 +15,8 @@ services:
     image: baaso.platform/auth:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
+    ports:
+      - "8000:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -24,6 +26,8 @@ services:
     image: baaso.platform/identity:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
+    ports:
+      - "8001:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -33,6 +37,8 @@ services:
     image: baaso.platform/administration:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
+    ports:
+      - "8002:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -42,6 +48,8 @@ services:
     image: baaso.platform/saas:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
+    ports:
+      - "8003:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -51,6 +59,8 @@ services:
     image: baaso.platform/cms:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
+    ports:
+      - "8004:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -61,6 +71,8 @@ services:
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
       - /data/baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
+    ports:
+      - "8080:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -70,6 +82,8 @@ services:
     image: baaso.platform/web:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
+    ports:
+      - "8081:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -80,6 +94,8 @@ services:
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
       - /data/baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
+    ports:
+      - "8090:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:
@@ -89,6 +105,8 @@ services:
     image: baaso.platform/publicweb:1.1.6
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
+    ports:
+      - "8091:80"
     environment:
       - ASPNETCORE_URLS=http://+:80
     networks:

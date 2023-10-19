@@ -1,17 +1,17 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://10.1.100.11:8090"
+    "BaseUrl": "http://baaso-publicwebgateway"
   },
   "Routes": [
     {
       "ServiceKey": "Account Service",
-      "ServiceDns": "http://10.1.100.11:8000",
+      "ServiceDns": "http://baaso-auth",
       "DownstreamPathTemplate": "/api/account/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.11",
-          "Port": 8000
+          "Host": "baaso-auth",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/account/{everything}",
@@ -19,13 +19,13 @@
     },
     {
       "ServiceKey": "Saas Service",
-      "ServiceDns": "http://10.1.100.11:8003",
+      "ServiceDns": "http://baaso-saas",
       "DownstreamPathTemplate": "/api/payment/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.11",
-          "Port": 8003
+          "Host": "baaso-saas",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/payment/{everything}",
@@ -33,13 +33,13 @@
     },
     {
       "ServiceKey": "Administration Service",
-      "ServiceDns": "http://10.1.100.11:8002",
+      "ServiceDns": "http://baaso-administration",
       "DownstreamPathTemplate": "/api/abp/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.11",
-          "Port": 8002
+          "Host": "baaso-administration",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/abp/{everything}",
@@ -47,13 +47,13 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.11:8004",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit-public/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.11",
-          "Port": 8004
+          "Host": "baaso-cms",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/cms-kit-public/{everything}",
@@ -61,13 +61,13 @@
     },
     {
       "ServiceKey": "Cms Service",
-      "ServiceDns": "http://10.1.100.11:8004",
+      "ServiceDns": "http://baaso-cms",
       "DownstreamPathTemplate": "/api/cms-kit/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "10.1.100.11",
-          "Port": 8004
+          "Host": "baaso-cms",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/cms-kit/{everything}",
