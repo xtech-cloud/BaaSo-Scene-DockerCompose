@@ -4,6 +4,10 @@ services:
 
   baaso-dbmigrator:
     image: baaso.platform/dbmigrator:1.1.6
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.DbMigrator/appsettings.json:/app/appsettings.json
     environment:
@@ -13,6 +17,11 @@ services:
 
   baaso-auth:
     image: baaso.platform/auth:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.AuthServer/appsettings.json:/app/appsettings.json
     ports:
@@ -24,6 +33,11 @@ services:
 
   baaso-identity:
     image: baaso.platform/identity:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.IdentityService/appsettings.json:/app/appsettings.json
     ports:
@@ -35,6 +49,11 @@ services:
 
   baaso-administration:
     image: baaso.platform/administration:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.AdministrationService/appsettings.json:/app/appsettings.json
     ports:
@@ -46,6 +65,11 @@ services:
 
   baaso-saas:
     image: baaso.platform/saas:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.SaasService/appsettings.json:/app/appsettings.json
     ports:
@@ -57,6 +81,11 @@ services:
 
   baaso-cms:
     image: baaso.platform/cms:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.CmsService/appsettings.json:/app/appsettings.json
     ports:
@@ -68,6 +97,11 @@ services:
 
   baaso-webgateway:
     image: baaso.platform/webgateway:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.WebGateway/appsettings.json:/app/appsettings.json
       - /data/baaso/baaso/BaaSo.Platform.WebGateway/ocelot.json:/app/ocelot.json
@@ -80,6 +114,11 @@ services:
 
   baaso-web:
     image: baaso.platform/web:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.Web/appsettings.json:/app/appsettings.json
     ports:
@@ -91,6 +130,11 @@ services:
 
   baaso-publicwebgateway:
     image: baaso.platform/publicwebgateway:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.PublicWebGateway/appsettings.json:/app/appsettings.json
       - /data/baaso/baaso/BaaSo.Platform.PublicWebGateway/ocelot.json:/app/ocelot.json
@@ -103,6 +147,11 @@ services:
 
   baaso-publicweb:
     image: baaso.platform/publicweb:1.1.6
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     volumes:
       - /data/baaso/baaso/BaaSo.Platform.PublicWeb/appsettings.json:/app/appsettings.json
     ports:
@@ -114,6 +163,11 @@ services:
 
   pae-nginx:
     image: nginx:1.25.2
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
     restart: always
     volumes:
       - /data/baaso/nginx/conf.d:/etc/nginx/conf.d
